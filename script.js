@@ -4,22 +4,9 @@ cSend.addEventListener('click', function(e) {
     e.preventDefault();
     cSend.style.display = 'none';
 
-    a = cA.value;
-    parseInt(a);
-        // console.log(a);
-
-    b = cB.value;
-    parseInt(b);
-    // console.log(b);
-
-    c = cC.value;
-    parseInt(c);         
-    // console.log(c);
-
+    a = cA.value; parseInt(a); b = cB.value; parseInt(b); c = cC.value; parseInt(c);
     delta = (b**2) - (4 * a * c);
-
-    raizqDelta = Math.sqrt(delta);
-    console.log(`A raiz quadrada de ${delta} é: ${raizqDelta}`)
+    raizqDelta = Math.sqrt(delta); console.log(`A raiz quadrada de ${delta} é: ${raizqDelta}`)
 
     if (!a || !b || !c) {
         cEquacao.innerHTML = "Insira valores para a função";
@@ -38,8 +25,6 @@ cSend.addEventListener('click', function(e) {
             cConcavidade.innerHTML = 'Gráfico: Concavidade para baixo. Pois <b>a</b> é negativo.';
         }
 
-
-
         if (raizqDelta < 0 || raizqDelta === NaN) {
             cDelta.innerHTML = `Delta Δ = ${delta}. <br/> Não existem raízes para delta negativo.`;
         } else if (raizqDelta == 0) {
@@ -55,16 +40,10 @@ cSend.addEventListener('click', function(e) {
             x2 = (-b - raizqDelta) / (2*a);
             console.log(`X" é igual a: ${x2}`)
                 cX2.innerHTML = `X<sup>2</sup> = ${x2}`;
-        
             }
         }
-
     }
-
-
-
     reload.classList.add('show');
-
 })
 
 function novaOperacao() {
