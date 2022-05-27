@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+.page {
+    width: 60%;
+    margin-inline: auto;
+    background-color: rgb(219, 209, 230);
+    padding: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    /* background-color: rebeccapurple; */
+    margin-inline: auto;
+}
+
+form {
+    /* background-color: yellow; */
+    width: fit-content;
+    margin-inline: auto;
+}
+
+input[type='numebr']:focus {
+    outline: 1px solid darkturquoise;
+}
+/* input[type='number']:focus  {
+    border: none;
+} */
+
+p {
+    width: fit-content;
+    /* background-color: bisque; */
+}
+
+p#cEquacao {
+    padding: .5rem;
+}
+
+.result {
+    width: fit-content;
+    /* background-color: rgb(208, 218, 247); */
+    margin-inline: auto;
+}
+
+/* .result:hover {
+    box-shadow: 0px 0px 5px rgb(92, 37, 148);
+} */
+
+#reload {
+    display: none;
+    transition: .2s;
+}
+
+#reload.show {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    padding: .5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    animation: active .5s infinite;
+}
+
+#reload:hover {
+    background-color: #fafafa;
+    animation: active 2s infinite;
+    background-color: aliceblue;
+    transform: scale(.9);
+}
+
+@keyframes active {
+    25% {
+        outline: 2px dashed aqua;
+        font-weight: bolder;
+        color: aqua;
+    }
+
+    50% {
+        outline: 2px dashed chartreuse;
+        font-weight: bolder;
+        color: chartreuse;
+    }
+    75% {
+        outline: 2px dashed darkorchid;
+        font-weight: bolder;
+        color: darkorchid;
+    }
+
+    100%, 0% {
+        outline: 2px dashed darkorange;
+        font-weight: bolder;
+        color: darkorange;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Quadrática</title>
+    <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <div class="page">
+
+    <h1>Fução Quadrática: ax<sup>2</sup>+bx+c</h1>
+    <!-- <p>Composta por A multiplicando a incóginita X elevada ao quadrado, B multiplicando a incóginita X e C.</p> -->
+
+
+    <h4>Resolução pela fórmula de Bhaskara: b<sup>2</sup> - 4ac</h4>
+    
+    
+    <div class="content">
+
+        <form action="">
+            <input type="number" name="tA" id="cA" placeholder="A" min="-999" max="999" title="Insira A" required>
+            <input type="number" name="tB" id="cB" placeholder="B" min="-999" max="999" title="Insira B" required>
+            <input type="number" name="tC" id="cC" placeholder="C" min="-999" max="999" title="Insira C" required>
+            <input type="submit" name="tSend" id="cSend" value="Calcular" title="Calcular">
+        </form>
+
+
+        <div class="result">
+            <p id="cEquacao"></p>
+
+            <p id="cDelta"></p>
+            <p id="cX1"></p>
+            <p id="cX2"></p>
+            <p id="cConcavidade"></p>
+            <p id="teste"></p>
+        </div>
+
+
+        <button id="reload" onclick="novaOperacao()">Nova Operação</button>
+    </div>
+
+</div>
+<!-- end page -->
+</body>
+</html>
