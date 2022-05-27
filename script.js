@@ -46,14 +46,7 @@ cSend.addEventListener('click', function(e) {
             cDelta.innerHTML = `Delta Δ = ${delta} ZERO`;
         } else {
             cDelta.innerHTML = `Delta Δ = ${delta}`;
-        }
 
-
-
-        if (raizqDelta) {
-            teste.innerHTML = 'TESTE: Não existem raízes para Δ < 0.';
-            
-        } else {
             if (raizqDelta >= 0) {
                 x1 = (-b + raizqDelta) / (2*a);
             console.log(`X' é igual a: ${x1}`);
@@ -65,6 +58,7 @@ cSend.addEventListener('click', function(e) {
         
             }
         }
+
     }
 
 
