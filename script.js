@@ -1,7 +1,7 @@
 validator()
 
 // cadatro de usuario
-function usuarioDefault() {
+myUser.onclick = () => {
     const UserFuncaoQuadratica = window.prompt('Qual o seu nome?');
     // const estado = window.prompt('Estado natal');
     // const pais = window.prompt('País');
