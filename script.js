@@ -1,3 +1,39 @@
+validator()
+
+// cadatro de usuario
+function usuarioDefault() {
+    const UserFuncaoQuadratica = window.prompt('Qual o seu nome?');
+    // const estado = window.prompt('Estado natal');
+    // const pais = window.prompt('País');
+    // const email = window.prompt('E-mail:')
+
+    localStorage.setItem('pessoa', `${UserFuncaoQuadratica}`);
+    // localStorage.setItem('estado', `${estado}`);
+    // localStorage.setItem('pais', `${pais}`);
+    // localStorage.setItem('email', email);
+
+    novaOperacao();
+}
+
+// validacao de exitencia de usuario
+function validator() {
+    if (localStorage.pessoa && localStorage.pessoa !== 'null') {
+        cUser.innerHTML = 'Bem-vindo&nbsp;' + localStorage.pessoa;
+    }
+    // if (localStorage.estado && localStorage.estado !== 'null') {
+    //     cEstado.innerHTML = 'Estado:&nbsp;' + localStorage.estado;
+    // }
+    // if (localStorage.pais && localStorage.pais !== 'null') {
+    //     cPais.innerHTML = 'Nação:&nbsp;' + localStorage.pais;
+    // }
+    // if(localStorage.email && localStorage.email !== 'null') {
+    //     cEmail.innerHTML = 'Email:&nbsp;' + localStorage.email;
+    // }
+}
+
+
+
+
 const cSend = document.getElementById('cSend');
 
 cSend.addEventListener('click', function(e) {
@@ -17,7 +53,7 @@ cSend.addEventListener('click', function(e) {
         cEquacao.style.background = "rgb(220, 20, 60)";
         
     } else {
-        cEquacao.innerHTML = `Equação: ${a}X<sup>2</sup>${b}X ${c}`;
+        cEquacao.innerHTML = `Equação: f(x) = ${a}X<sup>2</sup>${b}X ${c}`;
         if (a > 0) {
             cConcavidade.innerHTML = 'Gráfico: Concavidade para cima. Pois <b>a</b> é positivo.';
 
@@ -34,18 +70,72 @@ cSend.addEventListener('click', function(e) {
 
             if (raizqDelta >= 0) {
                 x1 = (-b + raizqDelta) / (2*a);
-            console.log(`X' é igual a: ${x1}`);
-                cX1.innerHTML = `X<sup>1</sup> = ${x1}`;
-        
-            x2 = (-b - raizqDelta) / (2*a);
-            console.log(`X" é igual a: ${x2}`)
-                cX2.innerHTML = `X<sup>2</sup> = ${x2}`;
+                // console.log(`X' é igual a: ${x1}`);      
+                x2 = (-b - raizqDelta) / (2*a);
+                // console.log(`X" é igual a: ${x2}`)
+                cRaizes.innerHTML = `X<sup>1</sup> = ${x1} e X<sup>2</sup> = ${x2}`;
             }
+
+            Vertice();
+
         }
     }
     reload.classList.add('show');
 })
 
+function Vertice() {
+    Xv = (-b / (2*a));
+    Yv = (-delta / (4*a));
+    console.log(`X do vertice ${Xv}`);
+    console.log(`Y do vertice ${Yv}`);
+    cVertice.innerText = `Vértice = (${Xv},${Yv})`;
+}
+
+
+
+
+
+function User() {    
+    const nameLocalStorage = window.prompt('Qual o seu nome');
+    if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem('usuariobr', `${nameLocalStorage}`);
+        cUser.innerHTML = localStorage.getItem('usuariobr');
+    }
+
+    const emailLocalStorage = window.prompt('Qual o seu melhor email?');
+    if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem('emailbr', `${emailLocalStorage}`);
+        cEmail.innerHTML = localStorage.getItem('emailbr');
+    }
+}
+
+
+
+
 function novaOperacao() {
     window.location.reload();
+}
+
+function capturar() {
+    window.print();
+}
+
+hello.onclick = function() {
+    const name = window.prompt('Hello! Whats your name?');
+    if (!name) {
+        alert('Por favor insira seu nome:')
+        const confirm = window.confirm('HELLOW?');
+        name = window.prompt('Hello! Whats your name?');
+        cEquacao.innerText = `Bem-vindo ${name}`
+
+        if (!name) {
+            window.confirm('Sai daki');
+            document.write('Vai trabalhar!');
+        }
+
+    }
+    // alert(`Bem-vindo ${name}`);
+    cEquacao.innerText = `Bem-vindo ${name}`
+
+
 }

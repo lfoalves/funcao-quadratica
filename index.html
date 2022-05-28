@@ -8,16 +8,41 @@
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="./script.js" defer></script>
+    <style>
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: rgb(118, 209, 28); */
+        }
+        header p {
+            margin: .2rem;
+        }
+    </style>
 </head>
 <body>
 
+    <header style="display: flex;">
+        <div>
+            <p id="cUser"></p>
+            <p id="cEstado"></p>
+            <p id="cPais"></p>
+            <p id="cEmail"></p>
+        </div>
+        <div>
+            <button onclick="usuarioDefault()">Meu Usuário</button>
+        </div>
+    </header>
+
     <div class="page">
 
-    <h1>Função Quadrática: ax<sup>2</sup>+bx+c</h1>
+    <h1>Função Quadrática: </br> y = ax<sup>2</sup>+bx+c</h1>
     <!-- <p>Composta por A multiplicando a incóginita X elevada ao quadrado, B multiplicando a incóginita X e C.</p> -->
 
 
     <h4>Resolução pela fórmula de Bhaskara: Δ = b<sup>2</sup> - 4ac</h4>
+    <!-- <p>X = -b +- &#8730;&#916;</br> / 2.a</p> -->
     
     
     <div class="content">
@@ -34,15 +59,19 @@
             <p id="cEquacao"></p>
 
             <p id="cDelta"></p>
-            <p id="cX1"></p>
-            <p id="cX2"></p>
+            <p id="cRaizes"></p>
             <p id="cConcavidade"></p>
+            <p id="cVertice"></p>
             <p id="teste"></p>
+
         </div>
 
 
         <button id="reload" onclick="novaOperacao()">Nova Operação</button>
     </div>
+
+    <!-- <button onclick="capturar()">Print</button> -->
+    <!-- <button id="hello">Hello</button> -->
 
 </div>
 <!-- end page -->
