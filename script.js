@@ -18,7 +18,7 @@ myUser.onclick = () => {
 // validacao de exitencia de usuario
 function validator() {
     if (localStorage.pessoa && localStorage.pessoa !== 'null') {
-        cUser.innerHTML = 'Bem-vindo&nbsp;' + localStorage.pessoa;
+        cUser.innerHTML = 'Bem-vindo(a)&nbsp;' + localStorage.pessoa;
     }
     // if (localStorage.estado && localStorage.estado !== 'null') {
     //     cEstado.innerHTML = 'Estado:&nbsp;' + localStorage.estado;
@@ -88,7 +88,7 @@ function Vertice() {
     Yv = (-delta / (4*a));
     console.log(`X do vertice ${Xv}`);
     console.log(`Y do vertice ${Yv}`);
-    cVertice.innerText = `Vértice = (${Xv},${Yv})`;
+    cVertice.innerText = `Vértice = (${Xv}, ${Yv})`;
 }
 
 

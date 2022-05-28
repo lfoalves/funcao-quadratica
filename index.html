@@ -8,34 +8,24 @@
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="./script.js" defer></script>
-    <style>
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            /* background-color: rgb(118, 209, 28); */
-        }
-        header p {
-            margin: .2rem;
-        }
-    </style>
 </head>
 <body>
 
-    <header style="display: flex;">
-        <div>
-            <p id="cUser"></p>
-            <p id="cEstado"></p>
-            <p id="cPais"></p>
-            <p id="cEmail"></p>
-        </div>
-        <div>
-            <button id="myUser" onclick="usuarioDefault()">Meu Usuário</button>
-        </div>
-    </header>
-
     <div class="page">
+
+        <header>
+            <div class="container">
+                <div>
+                    <p id="cUser"></p>
+                    <p id="cEstado"></p>
+                    <p id="cPais"></p>
+                    <p id="cEmail"></p>
+                </div>
+                <div>
+                    <button id="myUser" onclick="usuarioDefault()">Meu Usuário</button>
+                </div>
+            </div>
+        </header>
 
     <h1>Função Quadrática: </br> y = ax<sup>2</sup>+bx+c</h1>
     <!-- <p>Composta por A multiplicando a incóginita X elevada ao quadrado, B multiplicando a incóginita X e C.</p> -->

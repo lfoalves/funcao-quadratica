@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 62.5%;
@@ -7,13 +13,20 @@ html {
 
 body {
     font-size: 1.8rem;
+    background: linear-gradient(20deg, #111, #999);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* background-color: rebeccapurple; */
 }
 
 .page {
     width: 60%;
     margin-inline: auto;
-    background-color: rgb(219, 209, 230);
+    /* background-color: rgb(219, 209, 230); */
+    background-color: lightseagreen;
     padding: 1rem;
+    margin-top: 9rem;
 }
 
 .content {
@@ -22,8 +35,36 @@ body {
     width: fit-content;
     /* background-color: rebeccapurple; */
     margin-inline: auto;
+    gap: .5rem
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: cornsilk;
+    width: 100%;
+    height: 10vh;
+    /* background-color: rgb(118, 209, 28); */
+}
+header p {
+    margin: .2rem;
+    font-weight: bolder;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container {
+    width: 60%;
+    margin-inline: auto;
+}
 form {
     /* background-color: yellow; */
     width: fit-content;
@@ -73,9 +114,9 @@ p#cEquacao {
 }
 
 #reload:hover {
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     animation: active 2s infinite;
-    background-color: aliceblue;
+    background: none;
     transform: scale(.9);
 }
 
