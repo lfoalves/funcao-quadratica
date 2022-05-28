@@ -71,8 +71,12 @@ form {
     margin-inline: auto;
 }
 
-input[type='numebr']:focus {
+input[type='number']{
     outline: 1px solid darkturquoise;
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 /* input[type='number']:focus  {
     border: none;
@@ -100,6 +104,7 @@ p#cEquacao {
 #reload {
     display: none;
     transition: .2s;
+    margin-top: 2rem;
 }
 
 #reload.show {
@@ -110,6 +115,7 @@ p#cEquacao {
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    transform: scale(1.2);
     animation: active .5s infinite;
 }
 
@@ -117,23 +123,23 @@ p#cEquacao {
     /* background-color: #fafafa; */
     animation: active 2s infinite;
     background: none;
-    transform: scale(.9);
+    transform: scale(1);
 }
 
 @keyframes active {
     25% {
-        outline: 2px dashed aqua;
+        outline: 2px solid aqua;
         font-weight: bolder;
         color: aqua;
     }
 
     50% {
-        outline: 2px dashed chartreuse;
+        outline: 2px solid chartreuse;
         font-weight: bolder;
         color: chartreuse;
     }
     75% {
-        outline: 2px dashed darkorchid;
+        outline: 2px solid darkorchid;
         font-weight: bolder;
         color: darkorchid;
     }
