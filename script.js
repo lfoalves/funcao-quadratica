@@ -13,22 +13,15 @@ myUser.onclick = () => {
     // localStorage.setItem('email', email);
 
     novaOperacao();
+
 }
 
-// validacao de exitencia de usuario
+// validacao de existência de usuário
 function validator() {
     if (localStorage.pessoa && localStorage.pessoa !== 'null') {
         cUser.innerHTML = 'Bem-vindo(a)&nbsp;' + localStorage.pessoa;
+        // myUser.style.display = 'none';
     }
-    // if (localStorage.estado && localStorage.estado !== 'null') {
-    //     cEstado.innerHTML = 'Estado:&nbsp;' + localStorage.estado;
-    // }
-    // if (localStorage.pais && localStorage.pais !== 'null') {
-    //     cPais.innerHTML = 'Nação:&nbsp;' + localStorage.pais;
-    // }
-    // if(localStorage.email && localStorage.email !== 'null') {
-    //     cEmail.innerHTML = 'Email:&nbsp;' + localStorage.email;
-    // }
 }
 
 
@@ -118,24 +111,4 @@ function novaOperacao() {
 
 function capturar() {
     window.print();
-}
-
-hello.onclick = function() {
-    const name = window.prompt('Hello! Whats your name?');
-    if (!name) {
-        alert('Por favor insira seu nome:')
-        const confirm = window.confirm('HELLOW?');
-        name = window.prompt('Hello! Whats your name?');
-        cEquacao.innerText = `Bem-vindo ${name}`
-
-        if (!name) {
-            window.confirm('Sai daki');
-            document.write('Vai trabalhar!');
-        }
-
-    }
-    // alert(`Bem-vindo ${name}`);
-    cEquacao.innerText = `Bem-vindo ${name}`
-
-
 }
