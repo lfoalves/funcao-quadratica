@@ -21,8 +21,6 @@ body {
 .page {
     width: fit-content;
     margin-inline: auto;
-    /* background-color: rgb(219, 209, 230); */
-    /* background-color: rgb(236, 248, 247); */
     padding: 1rem;
     margin-top: 15rem;
     border-radius: 5px;
@@ -89,32 +87,20 @@ input[type='number']{
     font-weight: bolder;
     color: #555;
 }
-/* input[type='number']:focus  {
-    border: none;
-} */
 
 p {
     width: fit-content;
     /* background-color: bisque; */
 }
 
-/* p#cEquacao {
-    padding: .5rem;
-} */
-
 .result {
     width: fit-content;
-    /* background-color: rgb(208, 218, 247); */
     margin-inline: auto;
 }
 
 .result p {
     margin-bottom: .5rem;
 }
-
-/* .result:hover {
-    box-shadow: 0px 0px 5px rgb(92, 37, 148);
-} */
 
 #reload {
     display: none;
@@ -136,7 +122,6 @@ p {
 }
 
 #reload:hover {
-    /* background-color: #fafafa; */
     animation: active .5s infinite;
     background: none;
     transform: scale(1);

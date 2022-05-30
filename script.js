@@ -13,7 +13,6 @@ myUser.onclick = () => {
     // localStorage.setItem('email', email);
 
     novaOperacao();
-
 }
 
 // validacao de existência de usuário
@@ -24,11 +23,7 @@ function validator() {
     }
 }
 
-
-
-
 const cSend = document.getElementById('cSend');
-
 cSend.addEventListener('click', function(e) {
     e.preventDefault();
     cSend.style.display = 'none';
@@ -70,7 +65,6 @@ cSend.addEventListener('click', function(e) {
             }
 
             Vertice();
-
         }
     }
     reload.classList.add('show');
@@ -79,14 +73,10 @@ cSend.addEventListener('click', function(e) {
 function Vertice() {
     Xv = (-b / (2*a));
     Yv = (-delta / (4*a));
-    console.log(`X do vertice ${Xv}`);
-    console.log(`Y do vertice ${Yv}`);
+    console.log(`X do vertice: ${Xv}`);
+    console.log(`Y do vertice: ${Yv}`);
     cVertice.innerText = `Vértice = (${Xv}, ${Yv})`;
 }
-
-
-
-
 
 function User() {    
     const nameLocalStorage = window.prompt('Qual o seu nome');
@@ -101,9 +91,6 @@ function User() {
         cEmail.innerHTML = localStorage.getItem('emailbr');
     }
 }
-
-
-
 
 function novaOperacao() {
     window.location.reload();
